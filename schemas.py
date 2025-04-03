@@ -54,6 +54,7 @@ get_single_user = {
 
 create_user = {
   "$schema": "http://json-schema.org/draft-04/schema#",
+  "additionalProperties": False,
   "type": "object",
   "properties": {
     "name": {
@@ -79,6 +80,7 @@ create_user = {
 
 update_user = {
   "$schema": "http://json-schema.org/draft-04/schema#",
+  "additionalProperties": False,
   "type": "object",
   "properties": {
     "name": {
@@ -100,6 +102,7 @@ update_user = {
 
 register_successful = {
   "$schema": "http://json-schema.org/draft-04/schema#",
+  "additionalProperties": False,
   "type": "object",
   "properties": {
     "id": {
@@ -117,6 +120,7 @@ register_successful = {
 
 register_unsuccessful = {
   "$schema": "http://json-schema.org/draft-04/schema#",
+  "additionalProperties": False,
   "type": "object",
   "properties": {
     "error": {
