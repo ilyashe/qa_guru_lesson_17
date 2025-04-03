@@ -89,9 +89,16 @@ def test_should_user_in_users_list():
     last_name = 'Ferguson'
 
     response = requests.get(url + users_endpoint, params={'page': '2'})
-    print(response.json())
 
     assert response.status_code == 200
     users_id = {user['id']: (user['email'], user['last_name']) for user in response.json()['data']}
     assert user_id in users_id
     assert users_id[user_id] == (email, last_name)
+
+def test_should_amount_users_in_users_list_equal():
+
+    response = requests.get(url + users_endpoint, params={'page': '1'})
+
+    assert response.status_code == 200
+    users_id = [user['id'] for user in response.json()['data']]
+    assert len(users_id) == 6
