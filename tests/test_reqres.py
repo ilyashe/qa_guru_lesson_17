@@ -88,7 +88,7 @@ def test_should_user_in_users_list():
     email = 'lindsay.ferguson@reqres.in'
     last_name = 'Ferguson'
 
-    response = requests.get(url + users_endpoint, params={'page': "2"})
+    response = requests.get(url + users_endpoint, params={'page': '2'})
     print(response.json())
 
     assert response.status_code == 200
